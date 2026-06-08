@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas Inbox Cleaner</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="header">
+        <div class="brand">
+          <img class="brand-icon" src="icons/icon48.png" alt="">
+          <div>
+            <h1>Inbox Cleaner</h1>
+            <p class="subtitle">Canvas SKKU message cleanup</p>
+          </div>
+        </div>
+        <p id="status" class="status">canvas.skku.edu 탭에서 실행하세요.</p>
+      </header>
+
+      <section class="keywords" aria-label="Delete keywords">
+        <span>LectureNoti</span>
+        <span>스마트 알림</span>
+      </section>
+
+      <section class="controls" aria-label="Inbox cleanup controls">
+        <button id="scanButton" type="button" class="primary">Scan Inbox</button>
+        <button id="readButton" type="button" class="secondary" disabled>Mark Read</button>
+        <button id="deleteButton" type="button" class="danger" disabled>Delete Matched</button>
+      </section>
+
+      <section class="summary" aria-live="polite">
+        <div>
+          <span class="label">Matched</span>
+          <strong id="matchedCount">0</strong>
+        </div>
+        <div>
+          <span class="label">Read</span>
+          <strong id="readCount">0</strong>
+        </div>
+        <div>
+          <span class="label">Deleted</span>
+          <strong id="deletedCount">0</strong>
+        </div>
+        <div>
+          <span class="label">Failed</span>
+          <strong id="failedCount">0</strong>
+        </div>
+      </section>
+
+      <section id="progressPanel" class="progress-panel" hidden aria-live="polite">
+        <div class="progress-top">
+          <span id="progressLabel">Ready</span>
+          <span id="progressCount">0 / 0</span>
+        </div>
+        <progress id="deleteProgress" value="0" max="100"></progress>
+      </section>
+
+      <section class="results" aria-label="Matched conversations">
+        <ul id="resultList"></ul>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
