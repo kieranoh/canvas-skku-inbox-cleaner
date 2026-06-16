@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Canvas SKKU Inbox Cleaner",
-  "description": "Finds and deletes LectureNoti and smart notification conversations from canvas.skku.edu Inbox.",
+  "description": "Finds, marks read, or deletes LectureNoti and smart notification conversations from canvas.skku.edu Inbox.",
   "version": "1.0.0",
   "permissions": ["activeTab", "scripting"],
   "host_permissions": ["https://canvas.skku.edu/*"],

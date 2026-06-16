@@ -88,3 +88,7 @@ git pull
 - 자동으로 삭제하지 않습니다. 사용자가 직접 `Scan Inbox`, `Mark Read`, `Delete Matched`를 눌러야 합니다.
 - `Delete Matched`는 Canvas Conversations API를 사용하며, 현재 사용자 화면의 Inbox에서만 대화를 제거합니다.
 - 중요한 메시지가 섞여 있을 수 있으니 삭제 전 목록을 확인하세요.
+
+## 개인정보 보호
+
+개인정보처리방침은 [PRIVACY.md](PRIVACY.md)를 확인하세요.
